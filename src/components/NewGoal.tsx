@@ -9,8 +9,9 @@ const NewGoal = ({ handleAddGoal }: NewGoalProps) => {
     event.preventDefault();
     const enteredGoal = goal.current!.value;
     const enteredSummary = summarry.current!.value;
-    event.currentTarget.reset()
-    handleAddGoal(enteredGoal, enteredSummary);
+    event.currentTarget.reset();
+    if (enteredGoal && enteredSummary)
+      handleAddGoal(enteredGoal, enteredSummary);
   };
   return (
     <form onSubmit={handleSubmit}>

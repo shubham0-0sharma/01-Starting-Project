@@ -25,6 +25,7 @@ export default function App() {
   const handleDeleteGoal = (id: number) => {
     setGoals((perv) => perv.filter((goal) => goal.id !== id));
   };
+
   return (
     <main>
       <Header image={{ src: goalsImg, alt: "A list of goals" }}>
